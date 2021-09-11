@@ -6734,7 +6734,7 @@ textarea.form-control-lg {
 }
 
 .d-none {
-  displ//////ay: none !important;
+  display: none !important;
 }
 
 .shadow {
@@ -11328,14 +11328,17 @@ p {
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: #212529;
+  background-color: whitesmoke;
+  border: 2px solid red;
+  
 }
 #mainNav .navbar-toggler {
-  padding: 0.75rem;
-  font-size: 0.75rem;
+  padding: 1rem;
+  font-size: 1rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 500;
+  color: #000;
 }
 #mainNav .navbar-brand {
   color: #ffc800;
@@ -11345,13 +11348,15 @@ p {
   text-transform: uppercase;
 }
 #mainNav .navbar-brand img {
-  height: 1.5rem;
+  height: 2.25rem;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.95rem;
-  color: #fff;
+  color:#000;
   letter-spacing: 0.0625em;
+  font-weight: 500;
+  
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
   color: #ffc800;
@@ -11359,10 +11364,10 @@ p {
 
 @media (min-width: 992px) {
   #mainNav {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     border: none;
-    background-color: transparent;
+    background-color:whitesmoke;
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
@@ -11370,20 +11375,22 @@ p {
     transition: font-size 0.3s ease-in-out;
   }
   #mainNav .navbar-brand img {
-    height: 2rem;
+    height: 2.25rem;
     transition: height 0.3s ease-in-out;
+    
   }
   #mainNav.navbar-shrink {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: #212529;
+    background-color:whitesmoke;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
   }
   #mainNav.navbar-shrink .navbar-brand svg,
 #mainNav.navbar-shrink .navbar-brand img {
-    height: 1.5rem;
+    height: 2.25rem;
+    
   }
   #mainNav .navbar-nav .nav-item {
     margin-right: 1rem;
@@ -11397,31 +11404,12 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
+  background-image: url("../assets/img/header-bg.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
 }
-
-.back-video{
-  position:absolute;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width:100%;
-  height: 115%;
-  z-index: -100;
-}
-
-
-@media(max-aspect-ratio:16/9){
-  .back-video{
-      width:auto ;
-      height: 100%;
-  }
-}
-
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
   font-style: italic;
