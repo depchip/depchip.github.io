@@ -1,7 +1,3 @@
-//
-// Scripts
-// 
-
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
@@ -46,29 +42,46 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-    function processForm(e) {
+   
+const contactUsForm = document.querySelector('#contactForm');
+contactUsForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = contactUsForm.elements.name;
+    const email = contactUsForm.elements.email;
+    const phone = contactUsForm.elements.phone;
+    const message = contactUsForm.elements.message;
     
-        /* do what you want with the form */
-        showSubmissionForThreeSeconds();
-        // You must return false to prevent the default form behavior
-        return false;
-    }
-    
-    function showSubmissionForThreeSeconds(){
-        document.getElementById("submitSuccessMessage").className="d-block";
-        setTimeout(function(){
-        document.getElementById("submitSuccessMessage").className="d-none";
-        document.getElementById('contactForm').reset();
-        },500)
-    }
+    submitContactDetails(name.value, email.value, phone.value, message.value);
+    name.value = email.value = phone.value = message.value = '';
+})
 
-    var form = document.getElementById('contactForm');
-    if (form.attachEvent) {
-        form.attachEvent("submit", processForm);
-    } else {
-        form.addEventListener("submit", processForm);
-    }
-    
+function showSuccessMessage(){
+    document.querySelector("#submitSuccessMessage").className="d-block";
+    setTimeout(function(){
+    document.querySelector("#submitSuccessMessage").className="d-none";
+    },3000)
+}
+
+function showErrorMessage(){
+    document.querySelector("#submitErrorMessage").className="d-block";
+    setTimeout(function(){
+    document.querySelector("#submitErrorMessage").className="d-none";
+    },3000)
+}
+
+let submitContactDetails = function (name, email, phone, message) {
+    axios.post('https://depmail.herokuapp.com/send-mail', {
+        name,
+        email,
+        phone,
+        message
+    })
+        .then(function (response) {
+            showSuccessMessage();
+        })
+        .catch(function (error) {
+            showErrorMessage();
+        });
+}
 
 });
-
