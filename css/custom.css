@@ -481,7 +481,7 @@ i {
     padding: 50px 40px;
     margin: 15px 0;
     cursor: pointer;
-    transition: .4s; }
+    transition: .9s all ease; }
     #serviceSection .service-box .txt-area h3 {
       color: #9ca3a94d;
       margin-bottom: 50px;
@@ -655,7 +655,7 @@ i {
     margin: 15px 0;
     border-radius: 10px;
     text-align: center;
-    transition: .4s; }
+    transition: .9s all ease; }
     #pricingSection .pricing-box h4 {
       font-size: 22px;
       color: #9ca3a9;
