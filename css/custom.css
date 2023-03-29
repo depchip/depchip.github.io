@@ -1021,6 +1021,32 @@ i {
   background: #fff;
   border: 1px solid #fff; }
 
+
+#careers {
+
+  }
+  #careers h4{
+    color: #fb383b;
+    font-size: 28px;
+    text-align: left;
+    margin-bottom: 0px;
+  }
+  #careers p{
+    color: #666;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    margin: 0px;
+    text-align: left;
+  }
+  #careers .desc{
+    font-size: 14px;
+    font-weight: 500;
+  }
+  #careers .description p{
+    font-size: 13px;
+  }
+
+
 #footerSection {
   background: #222429;
   position: relative;
@@ -1316,6 +1342,7 @@ i {
   #contactArea .contact-box {
     text-align: center;
     padding: 50px; } }
+
 
 @media (max-width: 768px) {
   #homeSection .txt-area h1 {
